@@ -35,6 +35,18 @@ private:
     int clientInfoSize;                                             //
     //vector <char> servBuff(BUFF_SIZE), clientBuff(BUFF_SIZE);                           // Creation of buffers for sending and receiving data
     //short packet_size = 0;                                                              // The size of sending / receiving packet in bytes
+public:
+    Server();
+    Server(int _connNum);
+
+    int SocketInitializationInterface(void);
+    int SocketInitializaon(void);
+    int SocketBind(void);
+    int SocketListenerInitialization(void);
+    int SocketListenerInitialization(int _ConnectionNumbers);
+    int ConnectionConfirmation(void);
+    int MessageProcessing(void);
+
 
 
 };

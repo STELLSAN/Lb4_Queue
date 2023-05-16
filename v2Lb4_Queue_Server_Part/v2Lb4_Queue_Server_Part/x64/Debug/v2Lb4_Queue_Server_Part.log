@@ -1,2 +1,19 @@
-﻿  main.cpp
-  v2Lb4_Queue_Server_Part.vcxproj -> C:\Users\Admin\Desktop\My_app\3 Семестр\Main_prog\Blacklist\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe
+﻿  Server.cpp
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(145,69): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(149,52): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(160,73): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_accept в функции "public: int __cdecl Server::ConnectionConfirmation(void)" (?ConnectionConfirmation@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_bind в функции "public: int __cdecl Server::SocketBind(void)" (?SocketBind@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_closesocket в функции "public: int __cdecl Server::ConnectionConfirmation(void)" (?ConnectionConfirmation@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_htons в функции "public: int __cdecl Server::SocketBind(void)" (?SocketBind@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_listen в функции "public: int __cdecl Server::SocketListenerInitialization(void)" (?SocketListenerInitialization@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_recv в функции "public: int __cdecl Server::MessageProcessing(void)" (?MessageProcessing@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_send в функции "public: int __cdecl Server::MessageProcessing(void)" (?MessageProcessing@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_shutdown в функции "public: int __cdecl Server::MessageProcessing(void)" (?MessageProcessing@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_socket в функции "public: int __cdecl Server::SocketInitializaon(void)" (?SocketInitializaon@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_WSAStartup в функции "public: int __cdecl Server::SocketInitializationInterface(void)" (?SocketInitializationInterface@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_WSACleanup в функции "public: int __cdecl Server::ConnectionConfirmation(void)" (?ConnectionConfirmation@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_WSAGetLastError в функции "public: int __cdecl Server::ConnectionConfirmation(void)" (?ConnectionConfirmation@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_inet_pton в функции "public: int __cdecl Server::SocketBind(void)" (?SocketBind@Server@@QEAAHXZ).
+Server.obj : error LNK2019: ссылка на неразрешенный внешний символ inet_ntop в функции "public: int __cdecl Server::ConnectionConfirmation(void)" (?ConnectionConfirmation@Server@@QEAAHXZ).
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe : fatal error LNK1120: неразрешенных внешних элементов: 14

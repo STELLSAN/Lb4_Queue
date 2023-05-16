@@ -30,35 +30,34 @@ struct Date {
 class Patient
 {
 private:
-    Date _bornDate;
-    std::string _firstName;
-    std::string _lastName;
-    std::string _patronymic;
-
-    State _state;
-    Gender _gender;
-    ObjectType _patientType;
-
+private:
+	std::string _firstName;
+	std::string _lastName;
+	std::string _patronymic;
+	Date _bornDate;
+	State _state;
+	Gender _gender;
+	ObjectType _patientType;
 public:
+	Patient(std::string firstName, std::string lastName, std::string patronymic, Date bornDate, State state, Gender gender) : _firstName(firstName),
+		_lastName(lastName), _patronymic(patronymic), _bornDate(bornDate), _state(state), _gender(gender), _patientType(ObjectType::VALID) {
+	}
+	Patient() {
+		_patientType = ObjectType::NOT_VALID;
+	}
 
-    //Constructor
-    Patient(std::string firstName, std::string lastName, std::string patronymic, Date bornDate, State state, Gender gender);
-    //default constructor
-    Patient();
+	std::string get_firstName() const  { return _firstName; }
+	std::string get_lastName() const  { return _lastName; }
+	std::string get_patronymic() const  { return _patronymic; }
+	Date get_bornDate() const  { return _bornDate; }
+	State get_state() const  { return _state; }
+	Gender get_gender() const  { return _gender; }
+	bool IsValidPatient() const  { return _patientType == ObjectType::VALID; }
 
-    // Getters
-    const std::string& getFirstName() const;
-    const std::string& getLastName() const;
-    const std::string& getPatronymic() const;
-    const Date& getBornDate() const;
-    State getState() const;
-    Gender getGender() const;
-    bool ISValidPatient() const;
-
-    // pin
-    friend std::ostream& operator<<(std::ostream& out, const  Patient& patient) {
-        out << patient._firstName << " " << patient._lastName << " " << patient._patronymic << std::endl;
-    }
+	friend std::ostream& operator<<(std::ostream& out, const Patient& patient) {
+		out << patient._firstName << " " << patient._lastName << " " << patient._patronymic << std::endl;
+		return out;
+	}
 
 };
 
