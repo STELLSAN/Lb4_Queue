@@ -7,6 +7,8 @@
 #include<WS2tcpip.h> // Contains various programming interfaces related to the operation of TCP/IP
 #include<vector>
 
+#pragma comment(lib, "ws2_32.lib") // WHAT?? 
+
 
 
 /*
