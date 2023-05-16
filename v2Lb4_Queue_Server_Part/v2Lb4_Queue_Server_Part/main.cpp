@@ -4,7 +4,7 @@
 #include "ServerHandler.h"
 
 int main() {
-
+	/*
 	Queue<Patient> q = Queue<Patient>(3);
 
 	Patient patient_base = Patient("A", "A", "A", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
@@ -24,6 +24,9 @@ int main() {
 	std::cout << "_____________________________________________________________" << std::endl;
 
 	q.Print();
+	*/
+	ServerHandler test();
+	
 
 	return 0;
 }

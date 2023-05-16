@@ -12,16 +12,24 @@ private:
 	Queue<Patient> _patients;
 	std::ifstream pat_str;
 	void LoadPatients() {
-
-		pat_str.open("patient.txt"); // ? correct
-
 		/*
 		* 1. Открытие файла
 		* 2. Чтение пациента с файла
 		* 3. Создание пациента с прочитанными данными
 		* 4. Запустить в очередь
 		*/
-		pat_str.close();
+		pat_str.open("patient.txt"); // ? correct
+		std::string tmp;
+		if (pat_str.is_open())
+		{
+			while (std::getline(pat_str, tmp))
+			{
+				//std::cout << tmp << std::endl;
+
+			}
+		}
+		
+		pat_str.close();	
 	}
 public:
 	

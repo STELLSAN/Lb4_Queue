@@ -20,14 +20,15 @@ enum ObjectType {
     VALID, NOT_VALID
 };
 
-// DOB
-struct Date {
+// DOB 
+struct Date { 
     unsigned char day;
     unsigned char mount;
     unsigned short year;
 };
 
 //std::string sName(reinterpret_cast<char*>(name));
+// TODO char -> string ?
 std::string DateIntoString(Date date) {
 	std::string tmp = (reinterpret_cast<char*>(date.day));
 	tmp += (reinterpret_cast<char*>(date.mount));
@@ -55,6 +56,7 @@ public:
 		_patientType = ObjectType::NOT_VALID;
 	}
 
+	// Getters
 	std::string get_firstName() const  { return _firstName; }
 	std::string get_lastName() const  { return _lastName; }
 	std::string get_patronymic() const  { return _patronymic; }
@@ -62,6 +64,14 @@ public:
 	State get_state() const  { return _state; }
 	Gender get_gender() const  { return _gender; }
 	bool IsValidPatient() const  { return _patientType == ObjectType::VALID; }
+
+	// Setters
+	void set_firstName(std::string tmp)  { _firstName = tmp;}
+	void set_lastName(std::string tmp)  { _lastName = tmp; }
+	void set_patronymic(std::string tmp)  { _patronymic = tmp; }
+	//void set_bornDate() const { return _bornDate; }
+	//void set_state(State tmp) const { _state = tmp; }
+	//void set_gender(Gender tmp) const { _gender = tmp; }
 
 	
 	std::string PatientIntoStr() {

@@ -1,55 +1,8 @@
 ﻿  main.cpp
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(65,2): error C2953: Queue: шаблон класса уже определен
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(4,7): message : см. объявление "Queue"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(29,30): error C2662: T Queue<T>::Pop(void): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(29,21): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(29,21): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(41,7): message : см. объявление "Queue<T>::Pop"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(29,30): message : при попытке сопоставить список аргументов "()"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(8,21): error C2955: "Queue": для использования класс шаблон требуется список аргументов шаблон
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(4,7): message : см. объявление "Queue"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(8,19): error C2512: Queue: нет подходящего конструктора по умолчанию
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(4,7): message : см. объявление "Queue"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(14,17): error C2662: bool Queue<T>::IsEmpty(void) const: невозможно преобразовать указатель "this" из "Queue" в "const Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(14,16): message : Причина: невозможно преобразовать "Queue" в "const Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(14,16): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(27,10): message : см. объявление "Queue<T>::IsEmpty"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(14,17): message : при попытке сопоставить список аргументов "()"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(16,3): error C2662: void Queue<T>::Push(const T &): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(16,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(16,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(31,10): message : см. объявление "Queue<T>::Push"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(16,3): message : при попытке сопоставить список аргументов "(Patient)"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(17,3): error C2662: void Queue<T>::Push(const T &): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(17,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(17,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(31,10): message : см. объявление "Queue<T>::Push"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(17,3): message : при попытке сопоставить список аргументов "(Patient)"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(18,3): error C2662: void Queue<T>::Push(const T &): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(18,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(18,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(31,10): message : см. объявление "Queue<T>::Push"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(18,3): message : при попытке сопоставить список аргументов "(Patient)"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(19,3): error C2662: T Queue<T>::Pop(void): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(19,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(19,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(41,7): message : см. объявление "Queue<T>::Pop"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(19,3): message : при попытке сопоставить список аргументов "()"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(20,3): error C2662: void Queue<T>::Push(const T &): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(20,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(20,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(31,10): message : см. объявление "Queue<T>::Push"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(20,3): message : при попытке сопоставить список аргументов "(Patient)"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(22,17): error C2662: bool Queue<T>::IsFull(void) const: невозможно преобразовать указатель "this" из "Queue" в "const Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(22,16): message : Причина: невозможно преобразовать "Queue" в "const Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(22,16): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(29,10): message : см. объявление "Queue<T>::IsFull"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(22,17): message : при попытке сопоставить список аргументов "()"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(26,3): error C2662: void Queue<T>::Print(void): невозможно преобразовать указатель "this" из "Queue" в "Queue<T> &"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(26,2): message : Причина: невозможно преобразовать "Queue" в "Queue<T>"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(26,2): message : Для преобразования требуется второй оператор пользовательского преобразования или конструктор
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Queue.h(56,10): message : см. объявление "Queue<T>::Print"
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(26,3): message : при попытке сопоставить список аргументов "()"
-  Queue.cpp
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(28,16): warning C4930: ServerHandler test(void): функция с прототипом не вызвана (предполагалось определение переменной?)
   ServerHandler.cpp
   Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe при последней инкрементной компоновке; выполняется полная компоновка
+Patient.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl DateIntoString(struct Date)" (?DateIntoString@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UDate@@@Z) уже определен в main.obj
+ServerHandler.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl DateIntoString(struct Date)" (?DateIntoString@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UDate@@@Z) уже определен в main.obj
+C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
