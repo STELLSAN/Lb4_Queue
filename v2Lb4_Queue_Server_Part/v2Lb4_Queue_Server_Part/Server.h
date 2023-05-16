@@ -6,6 +6,8 @@
 #include<WinSock2.h> // Has implementations for working with sockets
 #include<WS2tcpip.h> // Contains various programming interfaces related to the operation of TCP/IP
 #include<vector>
+#include"ServerHandler.h"
+
 
 #pragma comment(lib, "ws2_32.lib") // WHAT?? 
 
@@ -48,7 +50,6 @@ public:
     int SocketListenerInitialization(int _ConnectionNumbers);
     int ConnectionConfirmation(void);
     int MessageProcessing(void);
-
 
 
 };

@@ -1,0 +1,11 @@
+﻿  Client.cpp
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(135,75): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(139,58): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(150,79): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  main.cpp
+  Создание кода...
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(67): warning C4715: Client::SocketBind: значение возвращается не при всех путях выполнения
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(81): warning C4715: Client::SocketListenerInitialization: значение возвращается не при всех путях выполнения
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(100): warning C4715: Client::SocketListenerInitialization: значение возвращается не при всех путях выполнения
+C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(125): warning C4715: Client::ConnectionÑonfirmation: значение возвращается не при всех путях выполнения
+  Lab4_Queue_ClientPart.vcxproj -> C:\Users\UnityTester\Desktop\Git stash\Lab4_Queue_ClientPart\x64\Debug\Lab4_Queue_ClientPart.exe
