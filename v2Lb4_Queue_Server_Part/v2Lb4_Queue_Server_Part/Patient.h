@@ -27,6 +27,15 @@ struct Date {
     unsigned short year;
 };
 
+//std::string sName(reinterpret_cast<char*>(name));
+std::string DateIntoString(Date date) {
+	std::string tmp = (reinterpret_cast<char*>(date.day));
+	tmp += (reinterpret_cast<char*>(date.mount));
+	tmp += (reinterpret_cast<char*>(date.year));
+	return tmp;
+}
+
+
 class Patient
 {
 private:
@@ -53,6 +62,19 @@ public:
 	State get_state() const  { return _state; }
 	Gender get_gender() const  { return _gender; }
 	bool IsValidPatient() const  { return _patientType == ObjectType::VALID; }
+
+	
+	std::string PatientIntoStr() {
+		std::string tmp = "";
+		tmp += get_firstName() + " ";
+		tmp += get_lastName() + " ";
+		tmp += get_patronymic() + " ";
+		tmp += DateIntoString(get_bornDate()) + " ";
+		std::string _tmp = ""; 
+		tmp += get_state() + " "; // ?? correct chech enum -> string
+		tmp += get_gender() + " "; // ?? analogically TODO 
+	}
+	
 
 	friend std::ostream& operator<<(std::ostream& out, const Patient& patient) {
 		out << patient._firstName << " " << patient._lastName << " " << patient._patronymic << std::endl;
