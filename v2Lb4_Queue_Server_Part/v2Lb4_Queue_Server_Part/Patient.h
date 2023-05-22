@@ -27,14 +27,6 @@ struct Date {
     unsigned short year;
 };
 
-//std::string sName(reinterpret_cast<char*>(name));
-// TODO char -> string ?
-std::string DateIntoString(Date date) {
-	std::string tmp = (reinterpret_cast<char*>(date.day));
-	tmp += (reinterpret_cast<char*>(date.mount));
-	tmp += (reinterpret_cast<char*>(date.year));
-	return tmp;
-}
 
 
 class Patient
@@ -72,6 +64,13 @@ public:
 	//void set_bornDate() const { return _bornDate; }
 	//void set_state(State tmp) const { _state = tmp; }
 	//void set_gender(Gender tmp) const { _gender = tmp; }
+
+	std::string DateIntoString(Date date) {
+		std::string tmp = (reinterpret_cast<char*>(date.day));
+		tmp += (reinterpret_cast<char*>(date.mount));
+		tmp += (reinterpret_cast<char*>(date.year));
+		return tmp;
+	}
 
 	
 	std::string PatientIntoStr() {

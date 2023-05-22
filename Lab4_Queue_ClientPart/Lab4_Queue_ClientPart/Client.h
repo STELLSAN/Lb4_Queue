@@ -14,8 +14,7 @@
 * 1) Инициализация сокетных интерфейсов Win32API						|	Initialization of Win32API socket interfaces
 * 2) Создание сокета и его инициализация								|	Socket creation and initialization
 * 3) Привязка сокета к паре IP-адрес/Порт								|	Binding a socket to an IP address/Port pair
-* 4) «Прослушивание» привязанного порта для идентификации подключений	|	"Listening" on a bound port to identify connections
-* 5) Подтверждение подключения											|	Connection confirmation
+* 4) Инициализация сокета подключения	                                |	Connection socket initialization
 * 6) Передача данных между Клиентом и Сервером							|	Data transfer between Client and Server
 */
 
@@ -23,12 +22,13 @@
 class Client
 {
 private:
-    //const char IP_SERV[] = "";                                 // Enter local Server IP address
-    //const int PORT_NUM = 0;                                         // Enter Open working server port
-    //const short BUFF_SIZE = 1024;                                   // Maximum size of buffer for exchange info between server and client
+    //const char IP_SERV[] = "";                                    // Enter local Server IP address
+    //const int PORT_NUM = 0;                                       // Enter Open working server port
+    //const short BUFF_SIZE = 1024;                                 // Maximum size of buffer for exchange info between server and client
     WSADATA wsData;                                                 // Need for Initializing socket interfaces
     int erStat;                                                     //
-    SOCKET ServSock;                                                //
+    SOCKET ServSock;                                              //
+    SOCKET ClientSock;
     in_addr ip_to_num;                                              //
     sockaddr_in servInfo;                                           //
     sockaddr_in clientInfo;                                         //  massive
@@ -42,14 +42,15 @@ public:
 
     Client();
 
-    int SocketInitializationInterface();                            //  1   Initializing socket interfaces
-    int SocketInitialization();                                     //  2   Creating and initializing a socket
-    int SocketBind();                                               //  3   Binding a socket to an IP/port
-    int SocketListenerInitialization();                             //  4.1 Listener without connection limits
-    int SocketListenerInitialization(int _connectionsNumbers);      //  4.2 Connection-Restricted Listener = _connectionsNumbers
-    int ConnectionСonfirmation();                                   //  5   Connection confirmation
-    int Message_processing();                                     //  6   Data transfer between Client and Server
-
+    int SocketInitializationInterface(void);    //  1   Initializing socket interfaces
+    int SocketInitializaon(void);               //  2   Creating and initializing a socket
+    int SocketBind(void);                       //  3   Binding a socket to an IP/port
+    //1-3 Logical is ok
+    //int SocketListenerInitialization();                             //  4.1 Listener without connection limits
+    //int SocketListenerInitialization(int _connectionsNumbers);      //  4.2 Connection-Restricted Listener = _connectionsNumbers
+    //int SocketConnectInitialization();                              //  4   Connect to server 
+    //int ConnectionСonfirmation();                                   //  5   Connection confirmation
+    int Message_processing();                                       //  6   Data transfer between Client and Server
 
 };
 
