@@ -2,4 +2,7 @@
 C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(140,69): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
 C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(144,52): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
 C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(155,73): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  ServerHandler.cpp
+  main.cpp
+  Создание кода...
   v2Lb4_Queue_Server_Part.vcxproj -> C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe
