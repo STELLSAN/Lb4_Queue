@@ -8,7 +8,7 @@ Server::Server() {
 	ConnectionConfirmation();
 	MessageProcessing();
 }
-
+	
 Server::Server(int _connNum) {
 	SocketInitializationInterface();
 	SocketInitializaon();
@@ -125,11 +125,6 @@ int Server::ConnectionConfirmation(void){
 	}
 	else {
 		std::cout << "Connecton to a client wstablished successfully" << std::endl;
-		char clientIP[22];
-
-		inet_ntop(AF_INET, &clientInfo.sin_addr, clientIP, INET6_ADDRSTRLEN);
-
-		std::cout << "Client connected with IP addres " << clientIP << std::endl;
 		return 0;
 	}
 }

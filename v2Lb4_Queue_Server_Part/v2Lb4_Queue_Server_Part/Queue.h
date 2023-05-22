@@ -1,3 +1,4 @@
+#pragma once
 #include "iostream"
 
 template <class T>
@@ -16,8 +17,6 @@ public:
     T* Begin() { return _begin; }
 
     T* End() { return _end; }
-
-    Queue();
 
     Queue(size_t size = 10) :_size(size) {
         _data = new T[size];

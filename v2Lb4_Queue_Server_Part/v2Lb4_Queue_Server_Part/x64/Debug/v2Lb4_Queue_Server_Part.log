@@ -1,8 +1,5 @@
-﻿  main.cpp
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\main.cpp(28,16): warning C4930: ServerHandler test(void): функция с прототипом не вызвана (предполагалось определение переменной?)
-  ServerHandler.cpp
-  Создание кода...
-  LINK : не найден или не выполнена сборка C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe при последней инкрементной компоновке; выполняется полная компоновка
-Patient.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl DateIntoString(struct Date)" (?DateIntoString@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UDate@@@Z) уже определен в main.obj
-ServerHandler.obj : error LNK2005: "class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl DateIntoString(struct Date)" (?DateIntoString@@YA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@UDate@@@Z) уже определен в main.obj
-C:\Users\UnityTester\Desktop\Git stash\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe : fatal error LNK1169: обнаружен многократно определенный символ - один или более
+﻿  Server.cpp
+C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(140,69): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(144,52): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Server.cpp(155,73): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  v2Lb4_Queue_Server_Part.vcxproj -> C:\Users\User\Desktop\monkaY\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe

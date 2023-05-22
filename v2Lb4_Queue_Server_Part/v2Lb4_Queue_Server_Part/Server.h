@@ -11,8 +11,6 @@
 
 #pragma comment(lib, "ws2_32.lib") // WHAT?? 
 
-
-
 /*
 * 1) Инициализация сокетных интерфейсов Win32API						|	Initialization of Win32API socket interfaces
 * 2) Создание сокета и его инициализация								|	Socket creation and initialization
@@ -26,9 +24,9 @@
 class Server
 {
 private:
-    //const char IP_SERV[] = "";                                 // Enter local Server IP address
-    //const int PORT_NUM = 0;                                         // Enter Open working server port
-    //const short BUFF_SIZE = 1024;                                   // Maximum size of buffer for exchange info between server and client
+    //const char IP_SERV[] = "";                                    // Enter local Server IP address
+    //const int PORT_NUM = 0;                                       // Enter Open working server port
+    //const short BUFF_SIZE = 1024;                                 // Maximum size of buffer for exchange info between server and client
     WSADATA wsData;                                                 // Need for Initializing socket interfaces
     int erStat;                                                     //
     SOCKET ServSock;                                                //
@@ -43,9 +41,9 @@ public:
     Server();
     Server(int _connNum);
 
-    int SocketInitializationInterface(void);
-    int SocketInitializaon(void);
-    int SocketBind(void);
+    int SocketInitializationInterface(void);    //  1   Initializing socket interfaces
+    int SocketInitializaon(void);               //  2   Creating and initializing a socket
+    int SocketBind(void);                       //  3   Binding a socket to an IP/port
     int SocketListenerInitialization(void);
     int SocketListenerInitialization(int _ConnectionNumbers);
     int ConnectionConfirmation(void);
