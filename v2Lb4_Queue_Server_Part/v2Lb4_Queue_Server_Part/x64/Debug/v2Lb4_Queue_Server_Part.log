@@ -1,2 +1,16 @@
-﻿  main.cpp
-  v2Lb4_Queue_Server_Part.vcxproj -> C:\Users\Admin\Desktop\My_app\3 Семестр\Main_prog\Blacklist\v2Lb4_Queue_Server_Part\x64\Debug\v2Lb4_Queue_Server_Part.exe
+﻿  Patient.cpp
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+  Server.cpp
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(116,1): fatal  error C1071: непредвиденное обнаружение конца файла в комментарии
+  ServerHandler.cpp
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(116,1): fatal  error C1071: непредвиденное обнаружение конца файла в комментарии
+  main.cpp
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): warning C4005: _CRT_SECURE_NO_WARNINGS: изменение макроопределения
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\Patient.h(6,1): message : "_CRT_SECURE_NO_WARNINGS" ранее объявлен в командной строке
+C:\Users\User\Desktop\MonkaGiGa\Lb4_Queue-0.15\v2Lb4_Queue_Server_Part\v2Lb4_Queue_Server_Part\ServerHandler.h(116,1): fatal  error C1071: непредвиденное обнаружение конца файла в комментарии
+  Создание кода...

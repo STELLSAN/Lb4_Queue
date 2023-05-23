@@ -6,8 +6,10 @@
 #include<WinSock2.h> // Has implementations for working with sockets
 #include<WS2tcpip.h> // Contains various programming interfaces related to the operation of TCP/IP
 #include<vector>
+#include"ServerHandler.h"
 
 
+#pragma comment(lib, "ws2_32.lib") // WHAT?? 
 
 /*
 * 1) Инициализация сокетных интерфейсов Win32API						|	Initialization of Win32API socket interfaces
@@ -22,9 +24,9 @@
 class Server
 {
 private:
-    //const char IP_SERV[] = "";                                 // Enter local Server IP address
-    //const int PORT_NUM = 0;                                         // Enter Open working server port
-    //const short BUFF_SIZE = 1024;                                   // Maximum size of buffer for exchange info between server and client
+    //const char IP_SERV[] = "";                                    // Enter local Server IP address
+    //const int PORT_NUM = 0;                                       // Enter Open working server port
+    //const short BUFF_SIZE = 1024;                                 // Maximum size of buffer for exchange info between server and client
     WSADATA wsData;                                                 // Need for Initializing socket interfaces
     int erStat;                                                     //
     SOCKET ServSock;                                                //
@@ -35,6 +37,17 @@ private:
     int clientInfoSize;                                             //
     //vector <char> servBuff(BUFF_SIZE), clientBuff(BUFF_SIZE);                           // Creation of buffers for sending and receiving data
     //short packet_size = 0;                                                              // The size of sending / receiving packet in bytes
+public:
+    Server();
+    Server(int _connNum);
+
+    int SocketInitializationInterface(void);    //  1   Initializing socket interfaces
+    int SocketInitializaon(void);               //  2   Creating and initializing a socket
+    int SocketBind(void);                       //  3   Binding a socket to an IP/port
+    int SocketListenerInitialization(void);
+    int SocketListenerInitialization(int _ConnectionNumbers);
+    int ConnectionConfirmation(void);
+    int MessageProcessing(void);
 
 
 };

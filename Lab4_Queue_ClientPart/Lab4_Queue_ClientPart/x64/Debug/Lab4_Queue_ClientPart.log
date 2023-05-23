@@ -1,0 +1,6 @@
+﻿  Client.cpp
+C:\Users\User\Desktop\monkaY\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(167,58): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Desktop\monkaY\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(177,79): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Desktop\monkaY\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(186,75): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\User\Desktop\monkaY\Lab4_Queue_ClientPart\Lab4_Queue_ClientPart\Client.cpp(67): warning C4715: Client::SocketBind: значение возвращается не при всех путях выполнения
+  Lab4_Queue_ClientPart.vcxproj -> C:\Users\User\Desktop\monkaY\Lab4_Queue_ClientPart\x64\Debug\Lab4_Queue_ClientPart.exe
