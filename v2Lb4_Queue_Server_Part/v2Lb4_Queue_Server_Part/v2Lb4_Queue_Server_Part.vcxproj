@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Converter.h" />
     <ClInclude Include="Patient.h" />
     <ClInclude Include="Queue.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="ServerHandler.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Converter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Patient.cpp" />
     <ClCompile Include="Queue.cpp" />

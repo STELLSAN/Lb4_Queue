@@ -45,7 +45,6 @@ public:
     int SocketInitializationInterface(void);    //  1   Initializing socket interfaces
     int SocketInitializaon(void);               //  2   Creating and initializing a socket
     int SocketBind(void);                       //  3   Binding a socket to an IP/port
-    //1-3 Logical is ok
     //int SocketListenerInitialization();                             //  4.1 Listener without connection limits
     //int SocketListenerInitialization(int _connectionsNumbers);      //  4.2 Connection-Restricted Listener = _connectionsNumbers
     //int SocketConnectInitialization();                              //  4   Connect to server 

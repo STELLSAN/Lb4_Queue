@@ -4,15 +4,11 @@
 #include "Patient.h"
 #include <string>
 #include <fstream>
-#include<sstream>
+#include <sstream>
+#include "Converter.h"
 
 
-/*
-* 
-* 
-* 
-* 
-*/
+
 class ServerHandler
 {
 private:
@@ -24,6 +20,9 @@ private:
 		* 2. Чтение пациента с файла
 		* 3. Создание пациента с прочитанными данными
 		* 4. Запустить в очередь
+		*/
+		/*
+		*
 		*/
 		pat_str.open("../patient.txt");
 		std::string tmp;
@@ -42,6 +41,14 @@ private:
 				getline(st_tmp, brn_year, ' ');
 				getline(st_tmp, stt, ' ');
 				getline(st_tmp, gndr, ' ');
+				Date tmp_date;
+				tmp_date.day = (unsigned char)brn_day.c_str();
+				tmp_date.mount = (unsigned char)brn_mount.c_str();
+				tmp_date.year = (unsigned char)brn_year.c_str();
+				Converter conv;
+				Patient tmp_patient = Patient(fn, ln, patr, tmp_date, conv.StateBook[stt], conv.GenderBook[gndr]);
+				_patients.Add(tmp_patient)
+
 				// Normal partition, then add setters, etc.
 				/*
 				std::cout << "-------------------------------------------" << std::endl;
