@@ -7,10 +7,13 @@
 #ifndef UNTITLED4_PATIENT_H
 #define UNTITLED4_PATIENT_H
 #include <iostream>
+#include <map>
 
 enum State {
     DISPANCER, NORMAL, CRITIC
 };
+
+
 
 enum Gender {
     MALE, FEMALE
@@ -56,14 +59,6 @@ public:
 	State get_state() const  { return _state; }
 	Gender get_gender() const  { return _gender; }
 	bool IsValidPatient() const  { return _patientType == ObjectType::VALID; }
-
-	// Setters
-	void set_firstName(std::string tmp)  { _firstName = tmp;}
-	void set_lastName(std::string tmp)  { _lastName = tmp; }
-	void set_patronymic(std::string tmp)  { _patronymic = tmp; }
-	//void set_bornDate() const { return _bornDate; }
-	//void set_state(State tmp) const { _state = tmp; }
-	//void set_gender(Gender tmp) const { _gender = tmp; }
 
 	std::string DateIntoString(Date date) {
 		std::string tmp = (reinterpret_cast<char*>(date.day));

@@ -41,10 +41,10 @@ int main() {
 
 	q.Print();
 	*/
-	ServerHandler test = ServerHandler();
+	//ServerHandler test = ServerHandler();
 	
 
-	//Server serv = Server(); // - Is it work's MonkaGiGa
+	Server serv = Server(); // - Is it work's MonkaGiGa
 
 	return 0;
 }
