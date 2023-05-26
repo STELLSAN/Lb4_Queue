@@ -60,6 +60,7 @@ public:
 	Gender get_gender() const  { return _gender; }
 	bool IsValidPatient() const  { return _patientType == ObjectType::VALID; }
 
+	/*
 	std::string DateIntoString(Date date) {
 		std::string tmp = (reinterpret_cast<char*>(date.day));
 		tmp += (reinterpret_cast<char*>(date.mount));
@@ -78,6 +79,7 @@ public:
 		tmp += get_state() + " "; // ?? correct chech enum -> string
 		tmp += get_gender() + " "; // ?? analogically TODO 
 	}
+	*/
 	
 
 	friend std::ostream& operator<<(std::ostream& out, const Patient& patient) {
