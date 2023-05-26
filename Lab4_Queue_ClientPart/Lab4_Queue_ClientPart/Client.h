@@ -22,20 +22,16 @@
 class Client
 {
 private:
-    //const char IP_SERV[] = "";                                    // Enter local Server IP address
-    //const int PORT_NUM = 0;                                       // Enter Open working server port
-    //const short BUFF_SIZE = 1024;                                 // Maximum size of buffer for exchange info between server and client
+
     WSADATA wsData;                                                 // Need for Initializing socket interfaces
     int erStat;                                                     //
-    SOCKET ServSock;                                              //
+    SOCKET ServSock;                                                //
     SOCKET ClientSock;
     in_addr ip_to_num;                                              //
     sockaddr_in servInfo;                                           //
-    sockaddr_in clientInfo;                                         //  massive
+    sockaddr_in clientInfo;                                         //
     SOCKET ClientConn;                                              //
     int clientInfoSize;                                             //
-    //vector <char> servBuff(BUFF_SIZE), clientBuff(BUFF_SIZE);                           // Creation of buffers for sending and receiving data
-    //short packet_size = 0;                                                              // The size of sending / receiving packet in bytes
 
 public:
 

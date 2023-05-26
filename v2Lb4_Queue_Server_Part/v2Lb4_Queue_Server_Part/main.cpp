@@ -10,8 +10,8 @@
 * 2)ѕереписать ќчередь -> тест
 * 2.1) ѕеренести в Client работающий функционал
 * 3)ServerHandler
-* 3.1)—читываение данных и помещение в Patient -> в Patient's
-* 3.2)Patient into string/char
+* 3.1)—читываение данных и помещение в Patient -> в Patient's - DONE
+* 3.2)Patient into string/char  - DONE
 * 4)ClientHandler
 * 4.1) get -> char/string patientInfo -> Patient и выдача
 * 5.0) ѕеренести реализацию в .cpp, добавить коммы.h и .cpp 
@@ -19,8 +19,7 @@
 */
 
 int main() {
-	/*
-	Queue<Patient> q = Queue<Patient>(4);
+	Queue<Patient> q = Queue<Patient>(3);
 
 	Patient patient_base = Patient("A", "A", "A", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
 	Patient patient_base1 = Patient("B", "B", "B", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
@@ -31,20 +30,20 @@ int main() {
 	q.Add(patient_base);
 	q.Add(patient_base1);
 	q.Add(patient_base2);
-	q.Add(patient_base3);
-	//q.Get();
 	//q.Add(patient_base3);
+	q.Get();
+	q.Get();
 
 	std::cout << (q.IsFull() ? "Queue is full" : "Queue is not full") << std::endl;
 
 	std::cout << "_____________________________________________________________" << std::endl;
 
 	q.Print();
-	*/
+	
 	//ServerHandler test = ServerHandler();
 	
 
-	Server serv = Server(); // - Is it work's MonkaGiGa
+	//Server serv = Server(); // - Is it work's MonkaGiGa
 
 	return 0;
 }
