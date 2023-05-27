@@ -1,162 +1,138 @@
 #pragma once
-#include "iostream"
+#include <iostream>
 
-template <class T>
+template<typename T>
 class Queue
 {
 private:
-	T* _data;
-	size_t _size;
-	size_t _count;
-	size_t _firstIndex;
-	size_t _lastIndex;
+    int size;
+    T* queue;
 
-	size_t _currentIndex;
-
+    int front, rear;
 
 public:
+    struct Iterator
+    {
+        int index;
+        Queue<T>* que;
 
-	Queue(size_t size = 10) : _size(size) {
-		_data = new T[size];
-		_firstIndex = 0;
-		_lastIndex = 0;
-	}
-	bool IsEmpty() {
-		return _count == 0;
-	}
-	bool IsFull() {
-		return _count == _size;
-	}
+        Iterator(int index, Queue<T>* queue)
+            : index(index), que(queue)
+        {}
 
-	void Add(T& t) {
-		if (IsFull())
-			throw std::range_error("Queue is full");
+        bool operator==(const Iterator& other) const { return index == other.index; }
+        bool operator!=(const Iterator& other) const { return index != other.index; }
 
-		size_t nextIndex = (_lastIndex + 1) % _size;
-		if (nextIndex != _firstIndex) {
-			_data[_lastIndex] = t;
-			_lastIndex = (_lastIndex + 1) % _size;
-			_count++;
-		}
-	}
-
-	T Get() {
-		if (IsEmpty())
-			throw std::range_error("Queue is empty");
-
-		T firstElem = _data[_firstIndex];
-		_firstIndex = (_firstIndex + 1) % _size;
-		_count--;
-
-		return firstElem;
-	}
-/*
-	void Print() {
-		if (IsEmpty()) {
-			std::cout << "Queue is empty" << std::endl;
-			return;
-		}
-		for (Reset(); !IsEnd(); Next()) {
-			std::cout << _data[_currentIndex] << std::endl;
-		}
-	}
-    */
-
-	void Reset() {
-		_currentIndex = _firstIndex;
-	}
-
-	bool IsEnd() {
-		return _currentIndex == _lastIndex;
-	}
-
-	void Next() {
-		_currentIndex = (_currentIndex + 1) % _size;
-	}
-
-    void Print() {
-        if (!IsEmpty()) {
-            int i = _firstIndex;
-            do {
-                std::cout << _data[i];
-                i = (i + 1) % _size;
-            } while (i != _lastIndex);
+        Iterator& operator++()
+        {
+            index = (index + 1) % que->size;
+            return *this;
         }
-    }
-};
 
-/*
-template <class T>
-class Queue {
-    //friend class Iterator;
-private:
-    T* _data;
-    //int memSize, dataCount ;
-    size_t _firstIndex;
-    size_t _lastIndex;
-    size_t _count = 0;
-    size_t _size = 0;
-    T* _begin;
-    T* _end;
-public:
-    T* Begin() { return _begin; }
+        Iterator& operator++(int a)
+        {
+            index = (index + 1) % que->size;
+            return *this;
+        }
 
-    T* End() { return _end; }
+        Iterator& operator--()
+        {
+            index = (index - 1 + que->size) % que->size;
+            return *this;
+        }
 
-    Queue(size_t size = 10) :_size(size) {
-        _data = new T[size];
-        _firstIndex = 0;
-        _lastIndex = 0;
+        Iterator& operator--(int a)
+        {
+            index = (index - 1 + que->size) % que->size;
+            return *this;
+        }
+
+        T& operator*() { return que->queue[index]; }
+        T* operator->() { return &(que->queue[index]); }
     };
 
-    bool IsEmpty() const { return _count == 0; };
+    Iterator begin() { return Iterator(front, this); }
+    Iterator end() { return Iterator(rear, this); }
 
-    bool IsFull() const { return _count == _size; };
+    Queue()
+        :front(-1), rear(-1), size(10)
+    {
+        queue = new T[size];
+    }
+    Queue(int _size)
+        :front(-1), rear(-1), size(_size)
+    {
+        queue = new T[size];
+    }
 
-    void Push(const T& t) {
+    bool IsFull()const {
+        if (front == 0 && rear == (size - 1))
+            return true;
+        if (front == rear + 1)
+            return true;
+
+        return false;
+    }
+
+    bool IsEmpty()const {
+        if (front == -1)
+            return true;
+
+        return false;
+    }
+
+
+    void Add(T value) {
+
         if (IsFull()) {
-            throw std::range_error("Push_error");
+            std::cout << "queue is full" << std::endl;
         }
-        _data[_lastIndex] = t;
-        _lastIndex = (_lastIndex + 1) % _size;
-        _count++;
+        else
+        {
+            if (front == -1) front = 0;
 
-    };
-
-    T Pop() {
-        if (IsEmpty()) {
-            throw std::range_error("error_Pop");
-        }
-        T firstElem = _data[_firstIndex];
-        _firstIndex = (_firstIndex + 1) % _size;
-        _count++;
-        return firstElem;
-    };
-
-    T Top() {
-        if (IsEmpty()) throw std::range_error("error");
-        return _data[_firstIndex];
-    };
-
-    void Print() {
-        if (!IsEmpty()) {
-            int i = _firstIndex;
-            do {
-                std::cout << _data[i];
-                i = (i + 1) % _size;
-            } while (i != _lastIndex);
+            ++rear %= size;
+            queue[rear] = value;
         }
     }
-};
-*/
 
-/*
-*
-* The iterator implies moving through the queue, because the queue class itself is responsible only for the work of including elements in the queue?
-*
-*
-* The following overloads should be enabled:
-    ++ - to move to one element (and reset to the beginning)
-    * - access to the element (creating a copy?)
-    ==/!= - Comparison of pointers, to understand the end of the list
-*/
+    T Get()
+    {
+        T temp;
+        if (IsEmpty()) {
+            std::cout << "queue is empty" << std::endl;
+        }
+        else
+        {
+            temp = queue[front];
+
+            if (front == rear)
+            {
+                front = -1;
+                rear = -1;
+            }
+
+            else
+                ++front %= size;
+
+            std::cout << " is poped..." << std::endl;
+            return temp;
+
+        }
+
+    }
+
+
+    ~Queue()
+    {
+        delete[] queue;
+    }
+
+};
+
+
+
+
+
+
+

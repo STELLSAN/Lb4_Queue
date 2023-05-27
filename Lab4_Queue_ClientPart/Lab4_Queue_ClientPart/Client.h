@@ -22,26 +22,29 @@
 class Client
 {
 private:
+
     WSADATA wsData;                                                 // Need for Initializing socket interfaces
     int erStat;                                                     //
-    SOCKET ServSock;                                              //
+    SOCKET ServSock;                                                //
     SOCKET ClientSock;
     in_addr ip_to_num;                                              //
     sockaddr_in servInfo;                                           //
-    sockaddr_in clientInfo;                                         //  massive
+    sockaddr_in clientInfo;                                         //
     SOCKET ClientConn;                                              //
     int clientInfoSize;                                             //
-    //vector <char> servBuff(BUFF_SIZE), clientBuff(BUFF_SIZE);                           // Creation of buffers for sending and receiving data
-    //short packet_size = 0;                                                              // The size of sending / receiving packet in bytes
 
 public:
 
 
     Client();
 
-    int SocketInitializationInterface(void);                        //  1   Initializing socket interfaces
-    int SocketInitializaon(void);                                   //  2   Creating and initializing a socket
-    int SocketBind(void);                                           //  3   Binding a socket to an IP/port
+    int SocketInitializationInterface(void);    //  1   Initializing socket interfaces
+    int SocketInitializaon(void);               //  2   Creating and initializing a socket
+    int SocketBind(void);                       //  3   Binding a socket to an IP/port
+    //int SocketListenerInitialization();                             //  4.1 Listener without connection limits
+    //int SocketListenerInitialization(int _connectionsNumbers);      //  4.2 Connection-Restricted Listener = _connectionsNumbers
+    //int SocketConnectInitialization();                              //  4   Connect to server 
+    //int ConnectionСonfirmation();                                   //  5   Connection confirmation
     int Message_processing();                                       //  6   Data transfer between Client and Server
 
 };
