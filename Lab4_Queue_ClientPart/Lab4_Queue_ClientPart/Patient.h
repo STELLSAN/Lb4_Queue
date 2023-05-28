@@ -7,57 +7,64 @@
 #ifndef UNTITLED4_PATIENT_H
 #define UNTITLED4_PATIENT_H
 #include <iostream>
+#include <map>
 
 enum State {
     DISPANCER, NORMAL, CRITIC
-};
-
-enum Gender {
-    MALE, FEMALE
 };
 
 enum ObjectType {
     VALID, NOT_VALID
 };
 
-// DOB
-struct Date {
-    unsigned char day;
-    unsigned char mount;
-    unsigned short year;
-};
+
+
 
 class Patient
 {
 private:
-    Date _bornDate;
-    std::string _firstName;
-    std::string _lastName;
-    std::string _patronymic;
-
+private:
+    std::string _fullName;
     State _state;
-    Gender _gender;
     ObjectType _patientType;
-
 public:
-
-    //Constructor
-    Patient(std::string firstName, std::string lastName, std::string patronymic, Date bornDate, State state, Gender gender);
-    //default constructor
-    Patient();
+    Patient(std::string fullName, State state) : _fullName(fullName),
+        _state(state), _patientType(ObjectType::VALID) {
+    }
+    Patient() {
+        _patientType = ObjectType::NOT_VALID;
+    }
 
     // Getters
-    const std::string& getFirstName() const;
-    const std::string& getLastName() const;
-    const std::string& getPatronymic() const;
-    const Date& getBornDate() const;
-    State getState() const;
-    Gender getGender() const;
-    bool ISValidPatient() const;
+    std::string get_fullName() const { return _fullName; }
+    State get_state() const { return _state; }
+    bool IsValidPatient() const { return _patientType == ObjectType::VALID; }
 
-    // pin
-    friend std::ostream& operator<<(std::ostream& out, const  Patient& patient) {
-        out << patient._firstName << " " << patient._lastName << " " << patient._patronymic << std::endl;
+    /*
+    std::string DateIntoString(Date date) {
+        std::string tmp = (reinterpret_cast<char*>(date.day));
+        tmp += (reinterpret_cast<char*>(date.mount));
+        tmp += (reinterpret_cast<char*>(date.year));
+        return tmp;
+    }
+
+
+    std::string PatientIntoStr() {
+        std::string tmp = "";
+        tmp += get_firstName() + " ";
+        tmp += get_lastName() + " ";
+        tmp += get_patronymic() + " ";
+        tmp += DateIntoString(get_bornDate()) + " ";
+        std::string _tmp = "";
+        tmp += get_state() + " "; // ?? correct chech enum -> string
+        tmp += get_gender() + " "; // ?? analogically TODO
+    }
+    */
+
+
+    friend std::ostream& operator<<(std::ostream& out, const Patient& patient) {
+        out << patient.get_fullName() << " " << patient.get_state() << std::endl;
+        return out;
     }
 
 };

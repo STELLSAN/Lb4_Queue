@@ -17,22 +17,47 @@
 *
 */
 
+/*
+* int main() {
+    RingQueue<int> queue(5);
+
+    queue.Enqueue(1);
+    queue.Enqueue(2);
+    queue.Enqueue(3);
+    queue.Enqueue(4);
+    queue.Enqueue(5);
+
+    for (RingQueue<int>::Iterator it = queue.Begin(); it != queue.End(); ++it)
+        std::cout << *it << std::endl;
+
+    std::cout << "Dequeue: " << queue.Dequeue() << std::endl;
+
+    queue.Enqueue(6);
+
+    for (RingQueue<int>::Iterator it = queue.Begin(); it != queue.End(); ++it)
+        std::cout << *it << std::endl;
+
+    std::cin.get();
+    return 0;
+}
+*/
+
 int main() {
     /*
     Queue<Patient> q = Queue<Patient>(3);
 
-    Patient patient_base = Patient("A", "A", "A", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
-    Patient patient_base1 = Patient("B", "B", "B", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
-    Patient patient_base2 = Patient("C", "C", "C", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
-    Patient patient_base3 = Patient("D", "D", "D", Date{ 1,2,1980 }, State::NORMAL, Gender::MALE);
+    Patient patient_base = Patient("A A A", State::NORMAL);
+    Patient patient_base1 = Patient("B B B", State::NORMAL);
+    Patient patient_base2 = Patient("C C C", State::NORMAL);
+    Patient patient_base3 = Patient("D D D", State::NORMAL);
     std::cout << (q.IsEmpty() ? "Queue is empty" : "Queue is not empty") << std::endl;
 
     q.Add(patient_base);
     q.Add(patient_base1);
     q.Add(patient_base2);
-    //q.Add(patient_base3);
-    q.Get();
-    q.Get();
+    for (Queue<Patient>::Iterator it = q.begin(); it != q.end(); it++) {
+        std::cout << *it;
+    }
 
     std::cout << (q.IsFull() ? "Queue is full" : "Queue is not full") << std::endl;
 

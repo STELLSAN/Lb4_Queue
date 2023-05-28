@@ -135,32 +135,43 @@ int Server::MessageProcessing(void) {
     const int PORT_NUM = 0;             // Enter Open working server port
     const short BUFF_SIZE = 1024;
     std::vector<char> servBuff(BUFF_SIZE), clientBuff(BUFF_SIZE);                           // Creation of buffers for sending and receiving data
+
+    //std::vector<char> cstr(str.c_str(), str.c_str() + str.size() + 1);
     short packet_size = 0;                                                              // The size of sending / receiving packet in bytes
 
     ServerHandler servh = ServerHandler();
 
     while (true) {
+        ServerHandler servH;
         packet_size = recv(ClientConn, servBuff.data(), servBuff.size(), 0);           // Receiving packet from client. Program is waiting (system pause) until receive
         std::cout << "Client's message: " << servBuff.data() << std::endl;
-        if ((clientBuff[0] == 'g' && clientBuff[1] == 'e' && clientBuff[2] == 't')) {
-            servh.GetPatient();
-        }
         //a degenerate solution
         // ask how to implement normally using sockets
-
-        std::cout << "Your (host) message: ";
-        fgets(clientBuff.data(), clientBuff.size(), stdin);
-
         // Check whether server would like to stop chatting 
-        if (clientBuff[0] == 'x' && clientBuff[1] == 'x' && clientBuff[2] == 'x') {
+        /*
+        * //
+        if (strcmp(in_buffer, "get") == 0) {
+            ....
+        }
+        */
+        if (servBuff[0] == 'g' && servBuff[1] == 'e' && servBuff[2] == 't') {
+            Patient pat = Patient("TEST TEST TEST", State::NORMAL);
+            servH.sendObject(ClientConn, pat);
+        }
+        else if (clientBuff[0] == 'x' && clientBuff[1] == 'x' && clientBuff[2] == 'x') {
             shutdown(ClientConn, SD_BOTH);
             closesocket(ServSock);
             closesocket(ClientConn);
             WSACleanup();
             return 0;
         }
+        else {
+            std::cout << "Your (host) message: ";
+            fgets(clientBuff.data(), clientBuff.size(), stdin);
+            packet_size = send(ClientConn, clientBuff.data(), clientBuff.size(), 0);
+        }
 
-        packet_size = send(ClientConn, clientBuff.data(), clientBuff.size(), 0);
+
 
         if (packet_size == SOCKET_ERROR) {
             std::cout << "Can't send message to Client. Error # " << WSAGetLastError() << std::endl;
