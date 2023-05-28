@@ -66,93 +66,6 @@ int Client::SocketBind(void) {
     }
 };
 
-/*
-int Client::SocketConnectInitialization() {
-
-    ZeroMemory(&servInfo, sizeof(servInfo));
-
-    servInfo.sin_family = AF_INET;
-    servInfo.sin_addr = ip_to_num;	  // Server's IPv4 after inet_pton() function
-    servInfo.sin_port = htons(1234);
-
-    erStat = connect(ServSock, (sockaddr*)&servInfo, sizeof(servInfo));
-
-    if (erStat != 0) {
-        std::cout << "Connection to Server is FAILED. Error # " << WSAGetLastError() << std::endl;
-        closesocket(ServSock);
-        WSACleanup();
-        return 1;
-    }
-    else {
-        std::cout << "Connection established SUCCESSFULLY. Ready to send a message to Server"
-            << std::endl;
-    }
-
-}
-*/
-/*
-int Client::SocketListenerInitialization() {
-    erStat = listen(ClientSock, SOMAXCONN_HINT(2)); // SONACONN - no connection restrictions
-
-    if (erStat != 0) {
-        std::cout << "Can't start to listen to. Error # " << WSAGetLastError() << std::endl;
-        closesocket(ClientSock);
-        WSACleanup();
-        return 1;
-    }
-    else {
-        std::cout << "Listening..." << std::endl;
-    }
-};
-*/
-
-/*
-int Client::SocketListenerInitialization(int _connectionsNumbers) {
-    sockaddr_in clientInfo;
-    ZeroMemory(&clientInfo, sizeof(clientInfo));
-
-    int clientInfoSize = sizeof(clientInfo);
-
-    SOCKET ClientConn = accept(ClientSock, (sockaddr*)&clientInfo, &clientInfoSize);
-
-    if (ClientConn == INVALID_SOCKET) {
-        std::cout << "Client detected, but can't connect to a client. Error # " << WSAGetLastError() << std::endl;
-        closesocket(ClientSock);
-        closesocket(ClientConn);
-        WSACleanup();
-        return 1;
-    }
-    else
-        std::cout << "Connection to a client established successfully" << std::endl;
-};
-*/
-
-/*
-int Client::ConnectionСonfirmation() {
-
-    ZeroMemory(&clientInfo, sizeof(clientInfo));	// Initializing clientInfo structure
-    int clientInfo_size = sizeof(clientInfo);
-
-    SOCKET ClientConn = accept(ClientSock, (sockaddr*)&clientInfo, &clientInfo_size);
-
-    if (ClientConn == INVALID_SOCKET) {
-        std::cout << "Client detected, but can't connect to a client. Error # " << WSAGetLastError() << std::endl;
-        closesocket(ClientSock);
-        closesocket(ClientConn);
-        WSACleanup();
-        return 1;
-    }
-    else {
-        std::cout << "Connection to a client established successfully" << std::endl;
-        char clientIP[22];
-
-        inet_ntop(AF_INET, &clientInfo.sin_addr, clientIP, INET_ADDRSTRLEN);	// Convert connected client's IP to standard string format
-
-        std::cout << "Client connected with IP address " << clientIP << std::endl;
-
-    }
-};
-*/
 
 int Client::Message_processing() {
     const char IP_SERV[] = "";          // Enter local Server IP address
@@ -194,6 +107,7 @@ int Client::Message_processing() {
         else
             std::cout << "Server message: " << servBuff.data() << std::endl;
         /*
+        * 
         packet_size = recv(ClientConn, servBuff.data(), servBuff.size(), 0);           // Receiving packet from client. Program is waiting (system pause) until receive
         std::cout << "Client's message: " << servBuff.data() << std::endl;
 

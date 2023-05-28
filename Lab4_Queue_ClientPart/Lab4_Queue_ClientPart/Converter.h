@@ -7,6 +7,7 @@
 class Converter
 {
 public:
+    Converter() {};
     std::map<std::string, State> StateBook = { {"DISPANCER", State::DISPANCER}, {"NORMAL", State::NORMAL} , {"CRITIC", State::CRITIC} }; // Расположение?
 
     std::string StateIntoStr(State st) {
