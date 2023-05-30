@@ -155,8 +155,7 @@ int Server::MessageProcessing(void) {
         }
         */
         if (servBuff[0] == 'g' && servBuff[1] == 'e' && servBuff[2] == 't') {
-            Patient pat = Patient("TEST TEST TEST", State::NORMAL);
-            servH.sendObject(ClientConn, pat);
+            servH.sendObject(ClientConn);
         }
         else if (clientBuff[0] == 'x' && clientBuff[1] == 'x' && clientBuff[2] == 'x') {
             shutdown(ClientConn, SD_BOTH);

@@ -18,6 +18,7 @@ class ServerHandler
 private:
     Queue<Patient> _patients;
     std::ifstream pat_str;
+    Queue<Patient>::Iterator it = _patients.begin();
     void LoadPatients() {
         /*
         * 1. Открытие файла
@@ -34,26 +35,25 @@ private:
                 std::stringstream  st_tmp(tmp); // ?? it's ok
                 std::string fullName, stt;
                 getline(st_tmp, fullName, '|');
-                getline(st_tmp, stt, '\0');
+                getline(st_tmp, stt, ' ');
                 Converter conv;
                 Patient tmp_patient = Patient(fullName, conv.StateBook[stt]);
                 _patients.Add(tmp_patient);
             }
         }
-        
         pat_str.close();
     }
 public:
 
     
-    void sendObject(SOCKET sock, const Patient& obj) {
+    void sendObject(SOCKET sock) {
         short packet_size = 0;
         const short BUFF_SIZE = 1024;
-        std::vector<char> clientBuff(BUFF_SIZE);
+        //std::vector<char> clientBuff(BUFF_SIZE);
         Converter conv;
-        std::string inBuff = obj.get_fullName() + " " + conv.StateIntoStr(obj.get_state());
-        std::copy(inBuff.begin(), inBuff.end(), std::back_inserter(clientBuff));
-        packet_size = send(sock, clientBuff.data(), clientBuff.size(), 0);
+        Patient tmp_pat = Patient(_patients.Get());
+        std::string inBuff = tmp_pat.GetStringPatientInfo();
+        packet_size = send(sock, inBuff.c_str(), inBuff.size(), 0);
     }
 
     ServerHandler() : _patients(5) {

@@ -39,7 +39,7 @@ int main() {
     std::cout << "_____________________________________________________________" << std::endl;
     */
 
-    //ServerHandler test = ServerHandler();
+    ServerHandler test = ServerHandler();
 
     Server serv = Server(); // - Is it work's MonkaGiGa
 
