@@ -115,7 +115,7 @@ public:
             else
                 ++front %= size;
 
-            std::cout << " is poped..." << std::endl;
+           // std::cout << " is poped..." << std::endl;
             return temp;
 
         }
