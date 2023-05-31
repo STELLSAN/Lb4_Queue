@@ -142,20 +142,10 @@ int Server::MessageProcessing(void) {
     ServerHandler servh = ServerHandler();
 
     while (true) {
-        ServerHandler servH;
         packet_size = recv(ClientConn, servBuff.data(), servBuff.size(), 0);           // Receiving packet from client. Program is waiting (system pause) until receive
         std::cout << "Client's message: " << servBuff.data() << std::endl;
-        //a degenerate solution
-        // ask how to implement normally using sockets
-        // Check whether server would like to stop chatting 
-        /*
-        * //
-        if (strcmp(in_buffer, "get") == 0) {
-            ....
-        }
-        */
         if (servBuff[0] == 'g' && servBuff[1] == 'e' && servBuff[2] == 't') {
-            servH.sendObject(ClientConn);
+            servh.sendObject(ClientConn);
         }
         else if (clientBuff[0] == 'x' && clientBuff[1] == 'x' && clientBuff[2] == 'x') {
             shutdown(ClientConn, SD_BOTH);

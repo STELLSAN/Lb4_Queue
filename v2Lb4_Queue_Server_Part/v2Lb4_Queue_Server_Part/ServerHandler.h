@@ -35,7 +35,7 @@ private:
                 std::stringstream  st_tmp(tmp); // ?? it's ok
                 std::string fullName, stt;
                 getline(st_tmp, fullName, '|');
-                getline(st_tmp, stt, ' ');
+                getline(st_tmp, stt, '|');
                 Converter conv;
                 Patient tmp_patient = Patient(fullName, conv.StateBook[stt]);
                 _patients.Add(tmp_patient);
@@ -43,17 +43,23 @@ private:
         }
         pat_str.close();
     }
-public:
 
-    
+public:
     void sendObject(SOCKET sock) {
-        short packet_size = 0;
         const short BUFF_SIZE = 1024;
-        //std::vector<char> clientBuff(BUFF_SIZE);
+        char msg[BUFF_SIZE] = " ";
         Converter conv;
-        Patient tmp_pat = Patient(_patients.Get());
-        std::string inBuff = tmp_pat.GetStringPatientInfo();
-        packet_size = send(sock, inBuff.c_str(), inBuff.size(), 0);
+        if (!_patients.IsEmpty()) {
+            Patient tmp_pat = _patients.Get();
+            std::string inBuff = tmp_pat.GetStringPatientInfo();
+            strcpy_s(msg, inBuff.c_str());
+            send(sock, msg, sizeof(msg), NULL);
+        }
+        else {
+            std::string inBuff = "Queue is empty";
+            strcpy_s(msg, inBuff.c_str());
+            send(sock, msg, sizeof(msg), NULL);
+        }
     }
 
     ServerHandler() : _patients(5) {

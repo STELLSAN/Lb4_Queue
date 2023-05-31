@@ -17,6 +17,7 @@
 * 5.0) Перенести реализацию в .cpp, добавить коммы.h и .cpp 
 * 
 */
+//ServerHandler test = ServerHandler();
 
 int main() {
     /*
@@ -39,7 +40,6 @@ int main() {
     std::cout << "_____________________________________________________________" << std::endl;
     */
 
-    ServerHandler test = ServerHandler();
 
     Server serv = Server(); // - Is it work's MonkaGiGa
 
